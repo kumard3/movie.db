@@ -21,12 +21,12 @@ const Banner = () => {
           jbjvrovberuobvuoerbvuoeruvorfvurfhveruf{" "}
         </h3>
         <div className="bannerbutton" >
-        <button className="bannerbutton__play" ><img src={play} /> play</button>
-        <button className="bannerbutton__list" ><img src={list} /> My List</button>
+        <button className="bannerbutton__play" ><img src={play} /> <h3>Play</h3></button>
+        <button className="bannerbutton__list" ><img src={list} /> <h3>My List</h3></button>
         </div>
       </div>
-      <img className="banner__bottom" src={black} alt={black} />
-    </div>
+    {/* <img className="banner__bottom" src={black} alt={black} />
+  */}</div>
   );
 };
 

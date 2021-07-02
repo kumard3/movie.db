@@ -10,7 +10,7 @@
         object-fit: cover;
         /* background: #c6c603; */
         object-position: center center;
-        opacity: 0.6;
+            
         z-index: 2;
     }
 
@@ -36,19 +36,45 @@
         display: flex;
         padding: 10px;
         margin: 5px;
+    
         &__play{
             border: none;
             width: 9vw;
-            height: 5vh;
-            margin: 0px 5px;
+            height: 6vh;
+            margin: 0px 15px;
             border-radius: 10px;
+            font-weight: 500px;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            h3{
+                padding: 0px 5px;
+            }
         }
         &__list{
             border: none;
             width: 9vw;
-            height: 5vh;
+            height: 6vh;
             border-radius: 10px;
+            color: white;
+            background-color: rgb(133, 131, 131);
+            font-weight: 500px;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h3{
+                padding: 0px 5px;
+            }
         }
     }
 
+}
+
+@media (max-width:500px){
+ .banner__bottom{
+     width: 100%;
+ }   
 }

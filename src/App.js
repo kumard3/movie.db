@@ -1,13 +1,16 @@
-
+import React, { Suspense } from 'react'
 import './App.css';
-import Header from './components/Header';
 
+const Header = React.lazy(() => import('./components/Header'));
 function App() {
   return (
-    <div className="app">
+    // <div className="app">
+    // <Header />
+    //    </div>
+    <Suspense fallback={<div>Loading... </div>}>
     <Header />
-       </div>
-  );
+</Suspense>
+    );
 }
 
 export default App;
