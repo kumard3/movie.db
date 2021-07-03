@@ -2,6 +2,7 @@
     color: white;
     display: flex;
     flex-direction: column;
+    background-color: black;
 
     &__img {
         width: 100%;
@@ -10,16 +11,17 @@
         object-fit: cover;
         /* background: #c6c603; */
         object-position: center center;
+        opacity: .8;
             
-        z-index: 2;
+        z-index: 1;
     }
 
     &__bottom {
         position: absolute;
         width: 100%;
-        top: 67vh;
-        height: 60vh;
-        z-index: 1;
+        top: 80vh;
+       
+        z-index: 7;
     }
     &__content{
         position: absolute;

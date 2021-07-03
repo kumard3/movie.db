@@ -25,8 +25,8 @@ const Banner = () => {
         <button className="bannerbutton__list" ><img src={list} /> <h3>My List</h3></button>
         </div>
       </div>
-    {/* <img className="banner__bottom" src={black} alt={black} />
-  */}</div>
+  
+  </div>
   );
 };
 
