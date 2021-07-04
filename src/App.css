@@ -6,5 +6,8 @@
 }
 .app{
   background-color: #141414;
-  width: 100vw;
+
+}
+html {
+  scroll-behavior: smooth;
 }
