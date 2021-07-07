@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "../styles/card.scss";
 
-
 const Card = ({ fetchUrl }) => {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
@@ -19,7 +18,7 @@ const Card = ({ fetchUrl }) => {
 
   return (
     <div class="card">
-    <div class="card__wrapper">
+      <div class="card__wrapper">
         {movies.map((ani) => {
           return (
             <div className="card__data">
@@ -30,9 +29,14 @@ const Card = ({ fetchUrl }) => {
                   src={`https://image.tmdb.org/t/p/original/${ani.backdrop_path}`}
                   alt={ani.title}
                 />
+                <Link to={`/${ani.id}`}>
+                  <div className="card__hidden">
+                    <h3>{ani.title} </h3>
+                    <button className="card__button">click</button>
+                  </div>
+                </Link>
               </div>
             </div>
-            
           );
         })}
       </div>

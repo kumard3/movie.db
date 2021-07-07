@@ -8,16 +8,23 @@ import Card from "./Card";
 const Body = () => {
   return (
     <div className="body">
-      <img className="body__bottom" src={black} alt={black} />
+      <img className="body__bottom" src={black} alt={black} />{" "}
       <div className="body__cardWrapper">
-        <Card className="body__card" fetchUrl={requests.fetchPage1} />
-        <Card className="body__card" fetchUrl={requests.fetchPage2} />
-        <Card className="body__card" fetchUrl={requests.fetchPage3} />
-        <Card className="body__card" fetchUrl={requests.fetchPage4} />
-        <Card className="body__card" fetchUrl={requests.fetchPage5} />
-        <Card className="body__card" fetchUrl={requests.fetchPage6} />
-        <Card className="body__card" fetchUrl={requests.fetchPage7} />
-      </div>
+        <h1 className="body__h"> anime </h1>{" "}
+        <Card className="body__card" fetchUrl={requests.fetchPage1} />{" "}
+        <h1 className="body__h"> anime </h1>{" "}
+        <Card className="body__card" fetchUrl={requests.fetchPage2} />{" "}
+        <h1 className="body__h"> anime </h1>{" "}
+        <Card className="body__card" fetchUrl={requests.fetchPage3} />{" "}
+        <h1 className="body__h"> anime </h1>{" "}
+        <Card className="body__card" fetchUrl={requests.fetchPage4} />{" "}
+        <h1 className="body__h"> anime </h1>{" "}
+        <Card className="body__card" fetchUrl={requests.fetchPage5} />{" "}
+        <h1 className="body__h"> anime </h1>{" "}
+        <Card className="body__card" fetchUrl={requests.fetchPage6} />{" "}
+        <h1 className="body__h"> anime </h1>{" "}
+        <Card className="body__card" fetchUrl={requests.fetchPage7} />{" "}
+      </div>{" "}
     </div>
   );
 };

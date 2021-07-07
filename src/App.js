@@ -1,9 +1,11 @@
-import React, { Suspense,useState,useEffect } from "react";
+import React, { Suspense, useState, useEffect } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
 import requests from "./api/data";
-import Header from './components/Header'
+import Header from "./components/Header";
 import Body from "./components/Body";
+import CardInfo from "./components/CardInfo";
 // const Header = React.lazy(() => import("./components/Header"));
 function App() {
   const [anime1, setAnime1] = useState([]);
@@ -22,7 +24,7 @@ function App() {
       const request5 = await axios.get(requests.fetchPage5);
       const request6 = await axios.get(requests.fetchPage6);
       const request7 = await axios.get(requests.fetchPage7);
-      setAnime1(request2.data.results);
+      setAnime1(request1.data.results);
       setAnime2(request2.data.results);
       setAnime3(request3.data.results);
       setAnime4(request4.data.results);
@@ -32,7 +34,6 @@ function App() {
     }
     fetchData();
   }, []);
-  console.log(anime1);
   let allData = [
     ...anime1,
     ...anime2,
@@ -42,19 +43,26 @@ function App() {
     ...anime6,
     ...anime7,
   ];
-
-
-
-
-
+  console.log(anime1);
+  console.log(anime2);
+  console.log(anime3);
+  console.log(anime4);
+  console.log(anime5);
+  console.log(anime6);
   return (
     <div className="app">
-    <Header />
-    <Body/>
-       </div>
-    // <Suspense fallback={<div>Loading... </div>}>
-    //   <Header />
-    // </Suspense>
+      <Router>
+        <Route exact path="/">
+          <Header />
+          <Body />
+        </Route>
+        <Route path="/:id">
+          <Header />
+          <Body />
+          <CardInfo allData={allData} />
+        </Route>
+      </Router>
+    </div>
   );
 }
 
