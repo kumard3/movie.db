@@ -43,7 +43,7 @@ function App() {
     ...anime6,
     ...anime7,
   ];
-  console.log(anime1);
+  console.log(process.env.REACT_APP_TMDB_API_KEY);
   console.log(anime2);
   console.log(anime3);
   console.log(anime4);
@@ -57,9 +57,9 @@ function App() {
           <Body />
         </Route>
         <Route path="/:id">
-          <Header />
-          <Body />
-          <CardInfo allData={allData} />
+        <CardInfo allData={allData} />
+        <Header />  
+        <Body />
         </Route>
       </Router>
     </div>

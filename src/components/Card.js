@@ -30,10 +30,10 @@ const Card = ({ fetchUrl }) => {
                   alt={ani.title}
                 />
                 <Link to={`/${ani.id}`}>
-                  <div className="card__hidden">
-                    <h3>{ani.title} </h3>
-                    <button className="card__button">click</button>
-                  </div>
+                <div className="card__hidden">
+                <h3>{ani.title} </h3>
+                <button className="card__button">click</button>
+                </div>
                 </Link>
               </div>
             </div>
