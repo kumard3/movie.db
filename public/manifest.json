@@ -1,7 +1,7 @@
 {
   
-    "name": "anime.tv",
-    "short_name": "anime.tv",
+    "name": "movie.db",
+    "short_name": "movie.db",
     "theme_color": "#000000",
     "background_color": "#000000",
     "display": "standalone",

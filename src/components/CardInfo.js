@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     width: " 57vw",
     marginLeft: "25%",
-    overflow: "scroll",
+    backgroundColor:"black"
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
