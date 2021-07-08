@@ -1,8 +1,55 @@
-.card__info{
-    position: relative;
-    z-index: 10000;
+.cardinfo {
+    &__img{
+        width: 100%;
+    }
+    &__button{
+        position: absolute;
+        float: right;
+        right: 20px;
+    }
+    &__iframe{
+        width: 100%;
+        height: 50vh;
+    }
+
+    &__wrapper {
+
+        padding: 30px;
+    }
 }
-.ReactModalPortal {
-    position: relative;
-    z-index: 10000;
+
+.makeStyles-modal-1 {
+
+   
+ width: 57vw;
+    height: 95vh;
+    display: flex;
+    overflow: scroll;
+    align-items: center;
+    margin-left: 25%;
+    margin-top: 20px;
+    justify-content: center;
+    color: white;   
+    border-radius: 14px;
+    background-color: rgb(0, 0, 0);
+        
+    &::-webkit-scrollbar {
+        display: none;
+      }
+}
+
+.makeStyles-paper-2 {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    padding: 0px !important;
+    background-color: transparent  !important ;
+    border: none !important;
+    width: 100%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+      }
+
 }

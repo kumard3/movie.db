@@ -1,6 +1,6 @@
 
 const requests = {
-    fetchPage1: `https://api.themoviedb.org/3/keyword/210024/movies?api_key=${process.env.REACT_APP_TMDB_API_KEY}&page=1`,
+    fetchPage1: `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_TMDB_API_KEY}`,
     fetchPage2: `https://api.themoviedb.org/3/keyword/210024/movies?api_key=${process.env.REACT_APP_TMDB_API_KEY}&page=2`,
     fetchPage3: `https://api.themoviedb.org/3/keyword/210024/movies?api_key=${process.env.REACT_APP_TMDB_API_KEY}&page=3`,
     fetchPage4: `https://api.themoviedb.org/3/keyword/210024/movies?api_key=${process.env.REACT_APP_TMDB_API_KEY}&page=4`,

@@ -1,93 +1,88 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Modal from "react-modal";
-import '../styles/cardinfo.scss'
-
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    zIndex:100000,
-    position:"relative"
-    
-
+import "../styles/cardinfo.scss";
+import { makeStyles } from "@material-ui/core/styles";
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import Fade from "@material-ui/core/Fade";
+import black from "../assets/Rectangle.png";
+const useStyles = makeStyles((theme) => ({
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: " 57vw",
+    marginLeft: "25%",
+    overflow: "scroll",
   },
-};
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: "2px solid #000",
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+  },
+}));
 
 const CardInfo = ({ allData }) => {
-  let subtitle;
-  const [modalIsOpen, setIsOpen] = React.useState(true);
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(true);
 
-  function openModal() {
-    setIsOpen(true);
-  }
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = "#f00";
-  }
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-  function closeModal() {
-    setIsOpen(false);
-  }
   const { id } = useParams();
   const animeData = allData.filter((book) => book.id === parseInt(id));
   const anime = animeData[0];
   console.log(anime);
   if (anime) {
     return (
-      <div className="card__info">
-  
+      <div className="cardinfo">
         <Modal
-          isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
-          onRequestClose={closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          className={classes.modal}
+          open={open}
+          closeAfterTransition
+          // style={{
+          //   backgroundSize: "cover",
+          //   backgroundImage: `url(
+          //     "https://image.tmdb.org/t/p/original/${anime.backdrop_path}"
+          //   )`,
+          //   backgroundPosition: "center center",
+          // }}
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
         >
-          <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-          <button onClick={closeModal}>close</button>
-          <div>I am a modal</div>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
-          <img
-            className="cardinfo__img"
-            src={`https://image.tmdb.org/t/p/w500${anime.backdrop_path}`}
-            alt="card-img"
-          />
-          <div className="cardinfo__wrapper">
-            <h2>{anime.title} </h2>
-            <div className="genes">
-              <span> Adventure </span>
-              <span> Drama </span>
-              <span> Adventure </span>
+          <Fade in={open}>
+            <div className={classes.paper}>
+              <Link to="/">
+                <button className="cardinfo__button" type="button" onClick={handleClose}>
+                  cross
+                </button>
+              </Link>
+              <iframe
+              className="cardinfo__iframe"
+                src={`https://fsapi.xyz/tmdb-movie/${anime.id}`}
+                frameborder="0"
+                scrolling="no"
+                allowfullscreen="allowfullscreen"
+              />
+
+              <div className="cardinfo__wrapper">
+                <h2>{anime.title} </h2>
+                <p>{anime.overview}</p>
+              </div>
+
             </div>
-            <p>{anime.overview}</p>
-          </div>
-          <iframe
-            src={`https://fsapi.xyz/tmdb-movie/${anime.id}`}
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="allowfullscreen"
-          />{" "}
-          <div className="bottom___section">
-            <button className="bottom___button">
-              <h3>Watch Now </h3>
-            </button>
-            <button className="bottom___button2">
-              <h3>Save </h3>
-            </button>
-          </div>
+          </Fade>
         </Modal>
       </div>
     );

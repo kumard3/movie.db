@@ -38,24 +38,15 @@ $duration : 450ms;
     &:hover {
       position: relative;
       z-index: 200;
-     
+     border-radius: 10px;
       height: 220px;
-      background-color: black;
+      background-color: rgb(32, 32, 32);
       display: flex;
       flex-direction: column;
       margin: 0 60px;
       transform: scale(1.5);
       z-index: 10;
-      border: 1px solid white;
 
-      .item__hidden {
-        display: block;
-        color: green;
-        position: absolute;
-        margin: 50% 0px;
-        z-index: -10;
-
-      }
 
       .card__hidden {
         display: block;

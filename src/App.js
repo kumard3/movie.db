@@ -4,9 +4,9 @@ import "./App.css";
 import axios from "axios";
 import requests from "./api/data";
 import Header from "./components/Header";
-import Body from "./components/Body";
+//import Body from "./components/Body";
 import CardInfo from "./components/CardInfo";
-// const Header = React.lazy(() => import("./components/Header"));
+ const Body = React.lazy(() => import("./components/Body"));
 function App() {
   const [anime1, setAnime1] = useState([]);
   const [anime2, setAnime2] = useState([]);
@@ -53,8 +53,11 @@ function App() {
     <div className="app">
       <Router>
         <Route exact path="/">
-          <Header />
-          <Body />
+        <Header />
+        <Suspense fallback={<div>Loading...</div>}>
+        <Body />
+      </Suspense>
+         
         </Route>
         <Route path="/:id">
         <CardInfo allData={allData} />
