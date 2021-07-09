@@ -49,13 +49,6 @@ const CardInfo = ({ allData }) => {
           className={classes.modal}
           open={open}
           closeAfterTransition
-          // style={{
-          //   backgroundSize: "cover",
-          //   backgroundImage: `url(
-          //     "https://image.tmdb.org/t/p/original/${anime.backdrop_path}"
-          //   )`,
-          //   backgroundPosition: "center center",
-          // }}
           BackdropComponent={Backdrop}
           BackdropProps={{
             timeout: 500,

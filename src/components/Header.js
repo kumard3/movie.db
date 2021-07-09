@@ -2,11 +2,11 @@ import React from 'react'
 import Nav from './Nav'
 import Banner from './Banner'
 import '../styles/header.scss'
-const Header = () => {
+const Header = ({anime}) => {
     return (
         <div className="header" >
         <Nav/>
-        <Banner/>
+        <Banner anime={anime} />
             
         </div>
     )

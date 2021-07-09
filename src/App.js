@@ -53,7 +53,7 @@ function App() {
     <div className="app">
       <Router>
         <Route exact path="/">
-        <Header />
+        <Header anime={anime1} />
         <Suspense fallback={<div>Loading...</div>}>
         <Body />
       </Suspense>

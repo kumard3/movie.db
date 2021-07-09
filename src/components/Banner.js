@@ -18,7 +18,7 @@ const Banner = () => {
           ihdvibhrgvriherbvhello their how are you are you fin
           hedfjsjfbfbrofbrfbrf ioherf ihdvibhrgvriherbv
           jbjvrovberuobvuoerbvuoeruvorfvurfhveruf
-          jbjvrovberuobvuoerbvuoeruvorfvurfhveruf{" "}
+          jbjvrovberuobvuoerbvuoeruvorfvurfhveruf
         </h3>
         <div className="bannerbutton" >
         <button className="bannerbutton__play" ><img src={play} /> <h3>Play</h3></button>
