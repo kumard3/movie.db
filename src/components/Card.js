@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "../styles/card.scss";
+import play from "../assets/play2.svg";
+import arrow from "../assets/arrow.svg";
+import black from "../assets/Rectangle.png";
 
 const Card = ({ fetchUrl }) => {
   const [movies, setMovies] = useState([]);
@@ -29,12 +32,17 @@ const Card = ({ fetchUrl }) => {
                   src={`https://image.tmdb.org/t/p/original/${ani.backdrop_path}`}
                   alt={ani.title}
                 />
-                <Link to={`/${ani.id}`}>
                 <div className="card__hidden">
-                <h3>{ani.title} </h3>
-                <button className="card__button">click</button>
+                <img className="card__bottomimg" src={black} />
+                  <div className="card__content">
+                    <h3>{ani.title} </h3>
+                    <Link to={`/${ani.id}`}>
+                      <div className="card__images"> </div>
+                      <img className=" card__play" src={play} />
+                      <img className=" card__arrow" src={arrow} />
+                    </Link>
+                  </div>
                 </div>
-                </Link>
               </div>
             </div>
           );

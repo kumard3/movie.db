@@ -15,6 +15,7 @@ function App() {
   const [anime5, setAnime5] = useState([]);
   const [anime6, setAnime6] = useState([]);
   const [anime7, setAnime7] = useState([]);
+  
   useEffect(() => {
     async function fetchData() {
       const request1 = await axios.get(requests.fetchPage1);
@@ -43,17 +44,17 @@ function App() {
     ...anime6,
     ...anime7,
   ];
-  console.log(process.env.REACT_APP_TMDB_API_KEY);
-  console.log(anime2);
-  console.log(anime3);
-  console.log(anime4);
-  console.log(anime5);
-  console.log(anime6);
+  // console.log(process.env.REACT_APP_TMDB_API_KEY);
+  // console.log(anime2);
+  // console.log(anime3);
+  // console.log(anime4);
+  // console.log(anime5);
+  // console.log(anime6);
   return (
     <div className="app">
       <Router>
         <Route exact path="/">
-        <Header anime={anime1} />
+        <Header />
         <Suspense fallback={<div>Loading...</div>}>
         <Body />
       </Suspense>

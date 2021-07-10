@@ -3,8 +3,8 @@ $duration : 450ms;
 
 
 .card {
-  height: 43vh;
-  overflow: scroll;
+height: 42vh;
+  overflow-x: scroll;
   display: flex;
   scroll-behavior: smooth;
 
@@ -37,18 +37,20 @@ $duration : 450ms;
 
     &:hover {
       position: relative;
-      z-index: 200;
      border-radius: 10px;
-      height: 220px;
-      background-color: rgb(32, 32, 32);
+      background-color: rgb(12, 11, 11);
       display: flex;
       flex-direction: column;
       margin: 0 60px;
-      transform: scale(1.5);
+      transform: scale(1.4);
       z-index: 10;
-
+      .card__img{
+        opacity: .7;
+        border-radius:10px ;
+      }
 
       .card__hidden {
+ 
         display: block;
         color: rgb(255, 255, 255);
         h3 {
@@ -61,25 +63,54 @@ $duration : 450ms;
 
   &__img {
     object-fit: contain;
-    max-height: 130px;
+    max-height: 140px;
   }
+  &__content{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+z-index: 10;
+  }
+
+  &__play{
+    float: left;
+    border: none;
+    height: 20px;
+    margin: 0px 15px;
+    border-radius: 10px;
+    font-weight: 500px;
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__arrow{
+    float: right;
+    border: none;
+    height: 20px;
+    margin: 0px 15px;
+    border-radius: 10px;
+    font-weight: 500px;
+    font-size: .8rem;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+&__bottomimg {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 100px;
+}
 
   &__hidden {
     display: none;
   }
+  &__images{
 
-  .item__hidden {
-    display: none;
-    color: green;
-    position: absolute;
-
-
-  }
-  .backgroundd{
-    position: absolute;
-    max-width: 170px;
-    border: 2px  solid white;
-    background-color: green;
   }
 }
 
