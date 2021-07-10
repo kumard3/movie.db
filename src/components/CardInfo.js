@@ -7,25 +7,9 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import cross from "../assets/cross.png";
-const useStyles = makeStyles((theme) => ({
-  modal: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: " 57vw",
-    marginLeft: "25%",
-    backgroundColor:"black"
-  },
-  paper: {
-    backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-}));
+
 
 const CardInfo = ({ allData }) => {
-  const classes = useStyles();
   const [open, setOpen] = React.useState(true);
 
   const handleOpen = () => {
@@ -44,9 +28,7 @@ const CardInfo = ({ allData }) => {
     return (
       <div className="cardinfo">
         <Modal
-          aria-labelledby="transition-modal-title"
-          aria-describedby="transition-modal-description"
-          className={classes.modal}
+          className="cardinfo__modal"
           open={open}
           closeAfterTransition
           BackdropComponent={Backdrop}
@@ -55,7 +37,7 @@ const CardInfo = ({ allData }) => {
           }}
         >
           <Fade in={open}>
-            <div className={classes.paper}>
+            <div className="cardinfo__modelwrapper">
               <Link to="/">
               <img src={cross} className="cardinfo__button" type="button" onClick={handleClose}/>
        
@@ -69,8 +51,8 @@ const CardInfo = ({ allData }) => {
               />
 
               <div className="cardinfo__wrapper">
-                <h2>{anime.title} </h2>
-                <p>{anime.overview}</p>
+              <h2 className="wrappertag" >{anime.title} </h2>
+              <p  className="wrappertag" >{anime.overview}</p>
               </div>
 
             </div>
