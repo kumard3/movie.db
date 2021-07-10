@@ -12,7 +12,7 @@ console.log(info)
     <div className="banner">
       <img
         className="banner__img"
-        src={`https://image.tmdb.org/t/p/original/${info[0].backdrop_path}`}
+        src={`https://image.tmdb.org/t/p/original/${info[0].poster_path}`}
         
         alt="banner"
       />

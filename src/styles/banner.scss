@@ -24,9 +24,9 @@
     }
     &__content{
         position: absolute;
-        top: 9rem;
-        width: 29rem;
-        left: 50px;
+        top: 29vh;
+        width: 49vw;
+        left: 5vw;
         z-index: 3;
         
     }
@@ -74,8 +74,21 @@
 
 }
 
-@media (max-width:500px){
+@media (max-width:960px){
  .banner__bottom{
      width: 100%;
- }   
+ }
+ .banner__content{
+    position: absolute;
+    top: 25vh;
+    width: 70vw;
+    left: 5vw;
+    z-index: 3;
+    h1{
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+}   
 }

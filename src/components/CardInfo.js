@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import black from "../assets/Rectangle.png";
+import cross from "../assets/cross.png";
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: "flex",
@@ -57,9 +57,8 @@ const CardInfo = ({ allData }) => {
           <Fade in={open}>
             <div className={classes.paper}>
               <Link to="/">
-                <button className="cardinfo__button" type="button" onClick={handleClose}>
-                  cross
-                </button>
+              <img src={cross} className="cardinfo__button" type="button" onClick={handleClose}/>
+       
               </Link>
               <iframe
               className="cardinfo__iframe"
