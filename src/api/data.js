@@ -1,5 +1,7 @@
+const API_KEY = process.env.REACT_APP_TMDB_API_KEY
+
 const requests = {
-  fetchPage1: `https://api.themoviedb.org/4/list/634?api_key=${process.env.REACT_APP_TMDB_API_KEY}&page=`,
+  fetchPage1: `https://api.themoviedb.org/4/list/634?api_key=${API_KEY}&page=`,
   fetchPage2: `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_API_KEY}&page=2`,
   fetchPage3: `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_TMDB_API_KEY}&page=3`,
   fetchPage4: `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_TMDB_API_KEY}&page=4`,
