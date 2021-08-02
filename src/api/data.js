@@ -11,13 +11,14 @@ const requests = {
 
 export default requests;
 
-export const  info = [
-    {
-        backdrop_path: "/A9sCKnxgTTapzu307ybdXCJQEqD.jpg",
-id: 60625,
-name: "Rick and Morty",
-overview: "Rick is a mentally-unbalanced but scientifically-gifted old man who has recently reconnected with his family. He spends most of his time involving his young grandson Morty in dangerous, outlandish adventures throughout space and alternate universes. Compounded with Morty's already unstable family life, these events cause Morty much distress at home and school.",
-poster_path: "/8kOWDBK6XlPUzckuHDo3wwVRFwt.jpg",
-vote_average: 8.8
-    }
-]
+export const info = [
+  {
+    backdrop_path: "/A9sCKnxgTTapzu307ybdXCJQEqD.jpg",
+    id: 60625,
+    name: "Rick and Morty",
+    overview:
+      "Rick is a mentally-unbalanced but scientifically-gifted old man who has recently reconnected with his family. He spends most of his time involving his young grandson Morty in dangerous, outlandish adventures throughout space and alternate universes. Compounded with Morty's already unstable family life, these events cause Morty much distress at home and school.",
+    poster_path: "/8kOWDBK6XlPUzckuHDo3wwVRFwt.jpg",
+    vote_average: 8.8,
+  },
+];
